@@ -51,4 +51,33 @@ p {
     outline: none;
 }
 
+:root {
+    --btn-1-main: #fb8500;
+    --btn-1-alt: #023047;
+}
+
+.btn-1 {
+    background-color: var(--btn-1-main);
+    color: var(--btn-1-alt);
+    border: none;
+    animation: btn-1 2s ease-in 1s infinite alternate;
+}
+
+.btn-1:hover {
+    /* border: 2px solid #023047; */
+    box-shadow: 2px 2px 5px var(--btn-1-alt);
+    animation: none;
+    transform: translate(0px,-2px);
+}
+
+.btn-1:active {
+    border: 4px solid var(--btn-1-alt);
+    
+}
+
+@keyframes btn-1 {
+    0% {color: white; text-shadow: 0 0 4px var(--btn-1-alt);}
+    100% {color: var(--btn-1-alt);}
+}
+
 /* Add your custom styles for btn-1, btn-2, and btn-3 */
