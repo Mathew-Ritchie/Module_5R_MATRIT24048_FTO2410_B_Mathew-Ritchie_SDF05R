@@ -80,4 +80,21 @@ p {
     100% {color: var(--btn-1-alt);}
 }
 
+
+.btn-2 {
+    border: 2px solid blue;
+    animation-name: btn-2;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes btn-2 {
+    25% {transform: scale(120%);}
+    50% {transform: scale(100%);}
+    75% {transform: scale(120%);}
+    100% {transform: scale(100%);}
+}
 /* Add your custom styles for btn-1, btn-2, and btn-3 */
