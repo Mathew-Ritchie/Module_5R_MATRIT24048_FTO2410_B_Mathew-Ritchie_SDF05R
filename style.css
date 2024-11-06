@@ -59,8 +59,9 @@ p {
     --btn-2-dark: #003566;
 }
 
-/* Button 1 - main annimation is the change in the text which changes colour throught the @keyframe. Additional transitions 
-happens through the :hover where the button translates upwards by 2px when hovered over */
+/* Button 1 - main annimation is the change in the text colour through the @keyframes function. A text shadow is also added to the 
+animation to help with readability. Additional transitions happens through the :hover where the button translates upwards by 2px when
+ hovered over */
 .btn-1 {
     background-color: var(--btn-1-light);
     color: var(--btn-1-dark);
@@ -111,7 +112,7 @@ The scale is also transfomed in the :hover to 120%.  */
 }
 
 /* Button-3 - has a floating/jumping animations with linear-gradient colour chnage.When focussed on the button scales 
-up and the text changes colours and becomes bold.   */
+up and the text changes colours and becomes bold. Also Test shadow has been added to the hover to help with readability.   */
 .btn-3 {
     background-image: linear-gradient(to right, yellow, green);
     animation: btn-3 1s ease 0s infinite alternate;
