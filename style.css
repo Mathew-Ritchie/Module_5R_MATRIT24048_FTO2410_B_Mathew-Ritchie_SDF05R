@@ -52,49 +52,59 @@ p {
 }
 
 :root {
-    --btn-1-main: #fb8500;
-    --btn-1-alt: #023047;
+    --btn-1-light: #fb8500;
+    --btn-1-dark: #023047;
+    --btn-2-light: #ffd60a;
+    --btn-2-dark: #003566;
 }
 
 .btn-1 {
-    background-color: var(--btn-1-main);
-    color: var(--btn-1-alt);
+    background-color: var(--btn-1-light);
+    color: var(--btn-1-dark);
     border: none;
     animation: btn-1 2s ease-in 1s infinite alternate;
 }
 
 .btn-1:hover {
-    /* border: 2px solid #023047; */
-    box-shadow: 2px 2px 5px var(--btn-1-alt);
+    box-shadow: 2px 2px 5px var(--btn-1-dark);
     animation: none;
     transform: translate(0px,-2px);
 }
 
 .btn-1:active {
-    border: 4px solid var(--btn-1-alt);
+    border: 4px solid var(--btn-1-dark);
     
 }
 
 @keyframes btn-1 {
-    0% {color: white; text-shadow: 0 0 4px var(--btn-1-alt);}
-    100% {color: var(--btn-1-alt);}
+    0% {color: white; text-shadow: 0 0 4px var(--btn-1-dark);}
+    100% {color: var(--btn-1-dark);}
 }
 
 
 .btn-2 {
-    border: 2px solid blue;
-    animation-name: btn-2;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
+    border: 2px solid var(--btn-2-dark);
+    animation: btn-2 4s ease 0s infinite alternate;
+    animation-fill-mode: both;
+    color: var(--btn-2-dark);
+}
+
+.btn-2:hover {
+    animation: none;
+    transform: scale(120%);
+    background-color: var(--btn-2-dark);
+    color: var(--btn-2-light);
+    border: none;
 }
 
 
 @keyframes btn-2 {
-    25% {transform: scale(120%);}
-    50% {transform: scale(100%);}
-    75% {transform: scale(120%);}
-    100% {transform: scale(100%);}
+    0% {transform: scale(100%); color: var (--btn-2-light);}
+    20% {transform: scale(120%); color: var(--btn-2-dark) ;}
+    40% {transform: scale(100%); color: var(--btn-2-light);}
+    60% {transform: scale(120%); color: var(--btn-2-dark); }
+    80% {transform: scale(100%); color: var(--btn-2-light);}
+    100% {transform: scale(120%); color: var(--btn-2-dark);}
 }
+
 /* Add your custom styles for btn-1, btn-2, and btn-3 */
