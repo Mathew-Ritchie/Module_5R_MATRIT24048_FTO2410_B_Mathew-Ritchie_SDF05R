@@ -51,6 +51,7 @@ p {
     outline: none;
 }
 
+/* Custom colours from coolor added to the root to be used for buttom 1 and 2 */
 :root {
     --btn-1-light: #fb8500;
     --btn-1-dark: #023047;
@@ -58,6 +59,8 @@ p {
     --btn-2-dark: #003566;
 }
 
+/* Button 1 - main annimation is the change in the text which changes colour throught the @keyframe. Additional transitions 
+happens through the :hover where the button translates upwards by 2px when hovered over */
 .btn-1 {
     background-color: var(--btn-1-light);
     color: var(--btn-1-dark);
@@ -81,12 +84,14 @@ p {
     100% {color: var(--btn-1-dark);}
 }
 
-
+/* Button 2 - The main animation is the change in the scale of the button as well as the colour of the background.
+The scale is also transfomed in the :hover to 120%.  */
 .btn-2 {
     border: 2px solid var(--btn-2-dark);
-    animation: btn-2 4s ease 0s infinite alternate;
+    animation: btn-2 2s ease 0s infinite alternate;
     animation-fill-mode: both;
-    color: var(--btn-2-dark);
+    color: var(--btn-2-light);
+    
 }
 
 .btn-2:hover {
@@ -98,13 +103,37 @@ p {
 }
 
 
+
 @keyframes btn-2 {
-    0% {transform: scale(100%); color: var (--btn-2-light);}
-    20% {transform: scale(120%); color: var(--btn-2-dark) ;}
-    40% {transform: scale(100%); color: var(--btn-2-light);}
-    60% {transform: scale(120%); color: var(--btn-2-dark); }
-    80% {transform: scale(100%); color: var(--btn-2-light);}
-    100% {transform: scale(120%); color: var(--btn-2-dark);}
+    0% {transform: scale(100%); color: var (--btn-2-light); text-shadow: 0 0 2px var(--btn-2-dark);}
+    100% {transform: scale(120%); color: var(--btn-2-dark); background-color: var(--btn-2-light);}
+    
 }
 
-/* Add your custom styles for btn-1, btn-2, and btn-3 */
+/* Button-3 - has a floating/jumping animations with linear-gradient colour chnage.When focussed on the button scales 
+up and the text changes colours and becomes bold.   */
+.btn-3 {
+    background-image: linear-gradient(to right, yellow, green);
+    animation: btn-3 1s ease 0s infinite alternate;
+    animation-fill-mode: both;
+    border: none;
+    
+}
+
+.btn-3:hover {
+    animation: none;
+    background-image: linear-gradient(to right, green, yellow);
+    border: none;
+    font-weight: bold;
+    scale: 120%;
+    color: #eeefed;
+    text-shadow: 0 0 5px var(--btn-1-dark);
+}
+
+@keyframes btn-3 {
+    0% {transform: translateY(5px);background-image: linear-gradient(to right,  yellow, green, green, green, green)}
+    25%{background-image: linear-gradient(to right, green, yellow, green, green, green)}
+    50% {background-image: linear-gradient(to right, green, green, yellow, green, green)}
+    75% {background-image: linear-gradient(to right, green, green, green, yellow, green)}
+    100% {transform: translateY(-5px);background-image: linear-gradient(to right, green, green, green, green, yellow)}
+}
